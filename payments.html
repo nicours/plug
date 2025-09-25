@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NICOURSPLUG | Payment Options</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Toast message -->
+<div id="toast" class="toast">Copied to clipboard!</div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="payments.html">Payment Options</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="terms.html" class="active">Terms</a></li>
+    </ul>
+  </nav>
+
+  <!-- Payment Options Section -->
+  <section class="payments">
+    <h1>Choose Your Payment Option</h1>
+    <p>Select the app you want to use. After sending money, WhatsApp me your screenshot for confirmation.</p>
+
+    <div class="payment-grid">
+
+      <!-- Zelle Card -->
+      <div class="payment-card">
+        <img src="images/zelle.png" alt="Zelle Logo">
+        <h3>Zelle</h3>
+        <p>JOYCE MCCONKEY</p>
+        <p class="payment-info">2677466425</p>
+        <button onclick="copyToClipboard('JOYCE MCCONKEY 2677466425')">Copy</button>
+      </div>
+
+      <!-- CashApp Card -->
+      <div class="payment-card">
+        <img src="images/cashapp.png" alt="CashApp Logo">
+        <h3>CashApp</h3>
+        <P>GADDY</P>
+        <p class="payment-info">$A2BALLOUT</p>
+        <button onclick="copyToClipboard('$A2BALLOUT')">Copy</button>
+      </div>
+
+      <!-- Apple Pay Card -->
+      <div class="payment-card">
+        <img src="images/applepay.png" alt="Apple Pay Logo">
+        <h3>Apple Pay</h3>
+        <p class="payment-info">+1(269)986-7480</p>
+        <button onclick="copyToClipboard('+1(269)986-7480')">Copy</button>
+      </div>
+
+      <!-- Venmo Card -->
+      <div class="payment-card">
+        <img src="images/venmo.png" alt="Venmo Logo">
+        <h3>Venmo</h3>
+        <p>JEREMY NOLAN</p>
+        <p class="payment-info">@Jeremy-Nolan-5</p>
+        <button onclick="copyToClipboard('@YourVenmo')">Copy</button>
+      </div>
+
+      <!-- Chime Card -->
+      <div class="payment-card">
+        <img src="images/chime.jpg" alt="Chime Logo">
+        <h3>Chime</h3>
+        <P>AMIRA GADDY</P>
+        <p class="payment-info">$A2tocrasy</p>
+        <button onclick="copyToClipboard('AMIRA GADDY $A2tocrasy')">Copy</button>
+      </div>
+
+      <!-- PayPal Card -->
+      <div class="payment-card">
+        <img src="images/paypal.png" alt="PayPal Logo">
+        <h3>PayPal</h3>
+        <P>GADDY</P>
+        <p class="payment-info">@MillzzHall</p>
+        <button onclick="copyToClipboard('@MillzzHall')">Copy</button>
+      </div>
+
+    </div>
+  </section>
+
+<div class="center-btn">
+  <a href="contact.html" class="btn">Contact me</a>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* === GLOBAL STYLES === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-image: url(images/hands.jpg);
+  background-size: cover;       /* Fill the screen */
+  background-position: center;  /* Centered */
+  background-repeat: no-repeat; /* No tiling */
+  background-attachment: fixed; /* Stays on scroll */
+  color: #222;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* === NAVIGATION BAR === */
+nav {
+  background-color: #0A3D62;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #25D366; /* WhatsApp Green Accent */
+}
+
+/* === SECTIONS === */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* === HERO SECTION === */
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2302fd;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Glow effect */
+}
+
+.intro p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: navy;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* === SCROLLING PAYMENT APPS === */
+.scrolling-apps {
+  margin: 1rem auto;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scrolling-apps strong {
+  display: inline-block;
+  padding-left: 100%; /* Start from off-screen */
+  animation: scroll-text 12s linear infinite;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0d09eb;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+@keyframes scroll-text {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* === HOME PAGE CARDS === */
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #0A3D62;
+}
+
+.card p {
+  font-weight: 600;
+  color: #333;
+}
+
+/* === PAYMENTS PAGE === */
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.payment-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.payment-card img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+.payment-info {
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.payment-card button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.payment-card button:hover {
+  background-color: #1aa851;
+}
+
+/* === CONTACT PAGE FORM STYLE === */
+.contact-form {
+  background: white;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.contact-row label {
+  color: #0A3D62;
+}
+
+.contact-row a {
+  color: #25D366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
+.back-btn {
+  display: block;
+  margin: 2rem auto 0;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* === TOAST POPUP === */
+.toast {
+  visibility: hidden;
+  min-width: 200px;
+  background: #28a745;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-weight: bold;
+  transition: visibility 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 600px) {
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .scrolling-apps strong {
+    font-size: 1rem;
+  }
+}
+.center-btn {
+  text-align: center;
+  margin: 2rem 0;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(90deg, #25D366, #128C7E); /* Bright green gradient */
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;  /* Bold text */
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4); /* Makes it pop */
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(90deg, #128C7E, #25D366); /* Slight color swap on hover */
+}
+
+
