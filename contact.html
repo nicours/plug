@@ -8,19 +8,32 @@
 </head>
 <body>
 
-  <nav>
-     <a href="index.html" class="logo">
-    <img src="images/logo1.png" alt="NICOURSPLUG Logo">
-  </a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="payments.html">Payments</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="terms.html">Terms</a></li>
-    </ul>
-  </nav>
+  <nav class="navbar">
+  <div class="logo">
+    <img src="images/logo1.png" alt="Nico URS Plug Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="payments.html">Tags</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="terms.html">Terms</a></li>
+  </ul>
+
+  <!-- Quick Links for Mobile -->
+  <div class="quick-links">
+    <select onchange="location = this.value;">
+      <option value="#">Quick Links</option>
+      <option value="index.html">Home</option>
+      <option value="payments.html">Tags</option>
+      <option value="about.html">About</option>
+      <option value="contact.html">Contact</option>
+      <option value="faq.html">FAQ</option>
+      <option value="terms.html">Terms</option>
+    </select>
+  </div>
+</nav>
 
   <section>
     <h1>Contact Me</h1>
