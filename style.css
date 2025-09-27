@@ -319,6 +319,22 @@ nav ul li {
     max-height: 80px;
   }
 }
+/* === RESPONSIVE NAVBAR === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+/* === RESPONSIVE BACKGROUND === */
+@media (max-width: 768px) {
+  body {
+    background-size: contain;  /* show the full image */
+    background-position: top center;
+  }
+}
 
 
 
