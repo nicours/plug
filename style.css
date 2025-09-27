@@ -4,7 +4,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-image: url(images/hands.jpg);
+  background-image: url(images/logo1.png);
   background-size: cover;       /* Fill the screen */
   background-position: center;  /* Centered */
   background-repeat: no-repeat; /* No tiling */
@@ -80,7 +80,7 @@ section {
   animation: scroll-text 12s linear infinite;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #0d09eb;
+  color: #09eb2b;
   text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
@@ -275,5 +275,51 @@ section {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   background: linear-gradient(90deg, #128C7E, #25D366); /* Slight color swap on hover */
 }
+/* Keep navbar height consistent */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* spreads items */
+  height: 80px;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+  flex-shrink: 0; 
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 80px;
+  width: auto;
+}
+
+/* Navigation links container */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;  /* center links */
+  flex: 1;                  /* take remaining space */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;           /* spacing between links */
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav {
+    height: 60px;
+  }
+  .logo img {
+    max-height: 80px;
+  }
+}
+
+
 
 
